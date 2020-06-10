@@ -1,0 +1,12 @@
+site_name: IAM
+theme:
+  name: material
+
+nav:
+  - Guides:
+      - Getting started: "getting-started.md"
+#  - Reference:
+#      - Permissions/roles: "reference/permissions.md"
+#      - Golang: "golang.md"
+#      - PHP: "php.md"
+#      - Protobuf: "reference/protobuf.md"

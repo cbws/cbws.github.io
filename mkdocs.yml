@@ -1,0 +1,21 @@
+site_name: Default
+theme:
+  name: material
+  features:
+    - tabs
+    #- instant
+nav:
+  - Home: index.md
+  - Services:
+    - Identity and Access Management: '!include ./iam/mkdocs.yml'
+    - Projects: '!include ./projects/mkdocs.yml'
+    - Virtual Private Networks: '!include ./vpn/mkdocs.yml'
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.tabbed
+  - pymdownx.superfences
+
+plugins:
+  - monorepo

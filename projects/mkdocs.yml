@@ -1,0 +1,13 @@
+site_name: Projects
+theme:
+  name: material
+
+nav:
+  - Guides:
+      - Getting started: "getting-started.md"
+      - Managing projects: "managing-projects.md"
+  - Reference:
+      - Permissions/roles: "reference/permissions.md"
+      - Golang: "golang.md"
+      - PHP: "php.md"
+      - Protobuf: "reference/protobuf.md"
