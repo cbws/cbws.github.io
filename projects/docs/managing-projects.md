@@ -1,4 +1,4 @@
-A resources on the CBWS platform are part of a project, they help bundle related resources for a specific goal.
+All resources on the CBWS platform are part of a project, they help bundle related resources for a specific goal.
 
 This guide describes how to create and use them to organize your resources.
 
@@ -9,7 +9,7 @@ Creating projects requires the `Project creator` role on an organization, after 
 
 !!! hint
     Since project names are unique across the entire CBWS platform it might be useful to for example prepend them
-    with a abbreviation of your organization or product name.
+    with an abbreviation of your organization or product name.
 
 === "Panel"
     1. Click on the project selection button
@@ -144,11 +144,89 @@ For more details IAM policies you can read the IAM getting started documentation
 
 !!! info
     To ensure we can help you we by default also give `Cloudbear tech support` the `Tech support` role on your project.
-    You can remove this at any point, this does mean our support department won't be able to immediately help you.
+    You can remove this at any point, this however means our support department won't be able to immediately help you.
 
 ### Getting current policy
 
+In this example we're going to view the current IAM policy of the `test-project` project.
+
+=== "Golang"
+
+    ```go
+    package main
+    
+    import (
+        "context"
+        "log"
+    
+        projects "github.com/cbws/go-cbws/cbws/projects/v1alpha1"
+        
+    )
+    func main() {
+        p, err := projects.NewClient(context.Background())
+        if err != nil {
+            log.Fatalf("Error: %+v", err)
+        }
+    
+        policy, err := v.GetIAMPolicy(context.Background(), "projects/test-project")
+        if err != nil {
+            log.Fatalf("Error: %+v", err)
+        }
+        
+        log.Printf("Policy: %+v", policy)
+    }
+    ```
+
 ### Changing policy
+
+In this example we're going to give user `employee2@example.com` the ability to administer virtual machines in the
+`test-project` project. For this we will be creating a binding in the policy that uses the
+`services/vm.cbws.xyz/roles/vm-admin` role.
 
 !!! warning
     Giving a principal the `setIAMPOlicy` permission will also this principal to give themselves more access.
+
+=== "Golang"
+
+    !!! tip
+        Setting a new policy overrides the previous policy entirely, make sure you include all bindings that should
+        exist after applying.
+
+    ```go
+    package main
+    
+    import (
+        "context"
+        "log"
+    
+        "github.com/cbws/go-cbws-grpc/cbws/iam/policy/v1alpha1"
+        projects "github.com/cbws/go-cbws/cbws/projects/v1alpha1"
+        
+    )
+    func main() {
+        p, err := projects.NewClient(context.Background())
+        if err != nil {
+            log.Fatalf("Error: %+v", err)
+        }
+    
+        _, err = v.SetIAMPolicy(context.Background(), "projects/test-project", v1alpha1.Policy{
+            Bindings: []*v1alpha1.Binding{
+                {
+                    Role: "roles/owner",
+                    Description: "Owner access for project creator",
+                    Members: []string{"user:employee1@example.com"},
+                },
+                {
+                    Role: "services/vm.cbws.xyz/roles/vm-admin",
+                    Description: "Virtual machine admin for colleague",
+                    Members: []string{"user:employee2@example.com"},
+                },
+                {
+                    Role: "roles/tech-support",
+                    Description: "Tech support access for Cloudbear tech departments",
+                    Members: []string{"group:tech@cloudbear.nl"},
+                },
+            },
+        })
+    }
+    ```

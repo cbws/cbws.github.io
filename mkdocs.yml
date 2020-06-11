@@ -7,7 +7,7 @@ theme:
 nav:
   - Home: index.md
   - Services:
-    - Identity and Access Management: '!include ./iam/mkdocs.yml'
+    - Identity & Access Management: '!include ./iam/mkdocs.yml'
     - Projects: '!include ./projects/mkdocs.yml'
     - Virtual Private Networks: '!include ./vpn/mkdocs.yml'
 

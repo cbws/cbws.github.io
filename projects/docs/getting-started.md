@@ -1,6 +1,6 @@
-A resources on the CBWS platform are part of a project, they help bundle related resources for a specific goal.
+All resources on the CBWS platform are part of a project, they help bundle related resources for a specific goal.
 
-Some use cases would be specific projects per environment for example production and staging, managing access based on teams or setups that don't use the Cloudbear DevOps service and don't have an SLA.
+Some use cases would be specific projects per environment for example production and staging, managing access based on teams or setups that don't use the Cloudbear DevOps service and don't have a SLA.
 
 Projects can be freely made within your organization account and can be removed anytime as long as there are no more resources inside.
 
