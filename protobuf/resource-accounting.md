@@ -6,8 +6,13 @@
 - [cbws/service_management/resource_accounting/v1alpha1/resource_accounting.proto](#cbws/service_management/resource_accounting/v1alpha1/resource_accounting.proto)
     - [AccountRequest](#cbws.service_management.resource_accounting.v1alpha1.AccountRequest)
     - [AccountResponse](#cbws.service_management.resource_accounting.v1alpha1.AccountResponse)
+    - [AggregateProjectUsageRequest](#cbws.service_management.resource_accounting.v1alpha1.AggregateProjectUsageRequest)
+    - [AggregateProjectUsageResponse](#cbws.service_management.resource_accounting.v1alpha1.AggregateProjectUsageResponse)
+    - [GenerateUsagePDFRequest](#cbws.service_management.resource_accounting.v1alpha1.GenerateUsagePDFRequest)
+    - [GenerateUsagePDFResponse](#cbws.service_management.resource_accounting.v1alpha1.GenerateUsagePDFResponse)
     - [ListResourcesRequest](#cbws.service_management.resource_accounting.v1alpha1.ListResourcesRequest)
     - [ListResourcesResponse](#cbws.service_management.resource_accounting.v1alpha1.ListResourcesResponse)
+    - [ReportedUsage](#cbws.service_management.resource_accounting.v1alpha1.ReportedUsage)
     - [Resource](#cbws.service_management.resource_accounting.v1alpha1.Resource)
     - [Usage](#cbws.service_management.resource_accounting.v1alpha1.Usage)
     - [UsageCurrent](#cbws.service_management.resource_accounting.v1alpha1.UsageCurrent)
@@ -56,6 +61,70 @@
 
 
 
+<a name="cbws.service_management.resource_accounting.v1alpha1.AggregateProjectUsageRequest"></a>
+
+### AggregateProjectUsageRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| projects | [string](#string) |  | Required. The resource name of the project to aggregate the usage for |
+| start | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
+| end | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
+
+
+
+
+
+
+<a name="cbws.service_management.resource_accounting.v1alpha1.AggregateProjectUsageResponse"></a>
+
+### AggregateProjectUsageResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| usage | [ReportedUsage](#cbws.service_management.resource_accounting.v1alpha1.ReportedUsage) | repeated | All the usages to report by product |
+
+
+
+
+
+
+<a name="cbws.service_management.resource_accounting.v1alpha1.GenerateUsagePDFRequest"></a>
+
+### GenerateUsagePDFRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| project | [string](#string) | repeated | Required. The resource name of the project to aggregate the usage for |
+| start | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
+| end | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  |  |
+
+
+
+
+
+
+<a name="cbws.service_management.resource_accounting.v1alpha1.GenerateUsagePDFResponse"></a>
+
+### GenerateUsagePDFResponse
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| pdf | [bytes](#bytes) |  |  |
+
+
+
+
+
+
 <a name="cbws.service_management.resource_accounting.v1alpha1.ListResourcesRequest"></a>
 
 ### ListResourcesRequest
@@ -83,6 +152,22 @@ The resource list response.
 | ----- | ---- | ----- | ----------- |
 | resources | [Resource](#cbws.service_management.resource_accounting.v1alpha1.Resource) | repeated | The list of matching resources. |
 | next_page_token | [string](#string) |  | To retrieve the next page of results, set ListResourcesRequest to this value. |
+
+
+
+
+
+
+<a name="cbws.service_management.resource_accounting.v1alpha1.ReportedUsage"></a>
+
+### ReportedUsage
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| product | [string](#string) |  | The product resource name in format services/domains.cbws.xyz/products/domain-nl |
+| total | [double](#double) |  |  |
 
 
 
@@ -191,6 +276,12 @@ Hostname: resourceaccounting.cbws.xyz
 
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
+| AggregateProjectUsage | [AggregateProjectUsageRequest](#cbws.service_management.resource_accounting.v1alpha1.AggregateProjectUsageRequest) | [AggregateProjectUsageResponse](#cbws.service_management.resource_accounting.v1alpha1.AggregateProjectUsageResponse) | Request a aggregated set of all usage grouped by product.
+
+Permission required: resourceaccounting.cbws.xyz/Usage/aggregate |
+| GenerateUsagePDF | [GenerateUsagePDFRequest](#cbws.service_management.resource_accounting.v1alpha1.GenerateUsagePDFRequest) | [GenerateUsagePDFResponse](#cbws.service_management.resource_accounting.v1alpha1.GenerateUsagePDFResponse) | Generate a usage breakdown PDF for a set of projects, this is the same document that also gets attached to invoices by the Cloudbear Webservices billing.
+
+Permission required: resourceaccounting.cbws.xyz/Usage/generatePDF |
 | ListResources | [ListResourcesRequest](#cbws.service_management.resource_accounting.v1alpha1.ListResourcesRequest) | [ListResourcesResponse](#cbws.service_management.resource_accounting.v1alpha1.ListResourcesResponse) | Permission required: resourceaccounting.cbws.xyz/Resource/list |
 | Account | [AccountRequest](#cbws.service_management.resource_accounting.v1alpha1.AccountRequest) | [AccountResponse](#cbws.service_management.resource_accounting.v1alpha1.AccountResponse) | Account usage for a resource in a consumer project
 

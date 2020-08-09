@@ -13,6 +13,7 @@
     - [GetProjectRequest](#cbws.projects.v1alpha1.GetProjectRequest)
     - [ListProjectsRequest](#cbws.projects.v1alpha1.ListProjectsRequest)
     - [ListProjectsResponse](#cbws.projects.v1alpha1.ListProjectsResponse)
+    - [UpdateProjectRequest](#cbws.projects.v1alpha1.UpdateProjectRequest)
   
     - [ProjectsService](#cbws.projects.v1alpha1.ProjectsService)
   
@@ -149,6 +150,24 @@ The service account list request.
 
 
 
+
+<a name="cbws.projects.v1alpha1.UpdateProjectRequest"></a>
+
+### UpdateProjectRequest
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| project | [Project](#cbws.projects.v1alpha1.Project) |  | The project to update.
+
+The project&#39;s `name` field is used to identify the project to be updated. Format: projects/{project} |
+| update_mask | [google.protobuf.FieldMask](#google.protobuf.FieldMask) |  | The list of fields to be updated. |
+
+
+
+
+
  
 
  
@@ -166,6 +185,9 @@ The service account list request.
 | CreateProject | [CreateProjectRequest](#cbws.projects.v1alpha1.CreateProjectRequest) | [Project](#cbws.projects.v1alpha1.Project) | Create a project, requires the projects.cbws.xyz/Project/create permission on the organization. The principal creating a project will get the owner role on the project. |
 | ListProjects | [ListProjectsRequest](#cbws.projects.v1alpha1.ListProjectsRequest) | [ListProjectsResponse](#cbws.projects.v1alpha1.ListProjectsResponse) | List all projects you have access to Requires the projects.cbws.xyz/Project/get permission on the project |
 | GetProject | [GetProjectRequest](#cbws.projects.v1alpha1.GetProjectRequest) | [Project](#cbws.projects.v1alpha1.Project) |  |
+| UpdateProject | [UpdateProjectRequest](#cbws.projects.v1alpha1.UpdateProjectRequest) | [Project](#cbws.projects.v1alpha1.Project) | Update a project
+
+Permission: projects.cbws.xyz/Project/update |
 | DeleteProject | [DeleteProjectRequest](#cbws.projects.v1alpha1.DeleteProjectRequest) | [.google.longrunning.Operation](#google.longrunning.Operation) |  |
 | GetPolicy | [.cbws.iam.policy.v1alpha1.GetPolicyRequest](#cbws.iam.policy.v1alpha1.GetPolicyRequest) | [.cbws.iam.policy.v1alpha1.Policy](#cbws.iam.policy.v1alpha1.Policy) | Returns the IAM access control policy for a Project. |
 | SetPolicy | [.cbws.iam.policy.v1alpha1.SetPolicyRequest](#cbws.iam.policy.v1alpha1.SetPolicyRequest) | [.cbws.iam.policy.v1alpha1.Policy](#cbws.iam.policy.v1alpha1.Policy) | Sets the IAM access control policy for a Project. |
