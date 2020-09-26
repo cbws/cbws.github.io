@@ -186,6 +186,11 @@ In this example we're going to give user `employee2@example.com` the ability to 
 !!! warning
     Giving a principal the `setIAMPolicy` permission will also allow this principal to give themselves more permissions.
 
+
+=== "Panel"
+
+    Project policies can be managed via the CBWS portal by opening a project and clicking on *Policy* in the menu on the left.
+
 === "Golang"
 
     !!! tip
