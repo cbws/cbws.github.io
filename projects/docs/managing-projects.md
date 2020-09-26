@@ -184,7 +184,7 @@ In this example we're going to give user `employee2@example.com` the ability to 
 `services/vm.cbws.xyz/roles/vm-admin` role.
 
 !!! warning
-    Giving a principal the `setIAMPOlicy` permission will also this principal to give themselves more access.
+    Giving a principal the `setIAMPolicy` permission will also allow this principal to give themselves more permissions.
 
 === "Golang"
 
