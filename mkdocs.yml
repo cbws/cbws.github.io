@@ -1,4 +1,4 @@
-site_name: Default
+site_name: CBWS
 theme:
   name: material
   features:
@@ -9,7 +9,8 @@ nav:
   - Services:
     - Identity & Access Management: '!include ./iam/mkdocs.yml'
     - Projects: '!include ./projects/mkdocs.yml'
-    - Virtual Private Networks: '!include ./vpn/mkdocs.yml'
+    - Virtual Private Clouds: '!include ./vpc/mkdocs.yml'
+    - Public Network: '!include ./network/mkdocs.yml'
 
 markdown_extensions:
   - admonition
