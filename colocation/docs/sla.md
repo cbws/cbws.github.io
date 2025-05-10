@@ -58,6 +58,10 @@ This SLA for the Colocation service (Power and Cooling) does not apply to any un
 * That results from any scheduled maintenance communicated in advance by CBWS or its datacenter partner.
 * Power interruptions affecting single-corded customer equipment, as such equipment cannot natively meet the Power Availability SLA prerequisite requiring connection to both A and B power feeds.
 
+## Concluding Terms
+
+These terms define the Service Level Agreement specifically for Power and Cooling aspects of the CBWS Colocation service. The general CBWS Terms of Service also apply to the use of all CBWS services and govern aspects not explicitly covered in this SLA.
+
 ### Customer Support
 Support requests can be made via:
 
@@ -65,7 +69,3 @@ Support requests can be made via:
 * **Phone:** +31 (0)85 743 0374
 
 Operating hours are Monday to Friday, 09:00 - 17:00 (CET/CEST). Email requests are responded to within 24 hours of receipt during these times (this reaction time is an effort obligation). Phone support is available during operating hours.
-
-## Concluding Terms
-
-These terms define the Service Level Agreement specifically for Power and Cooling aspects of the CBWS Colocation service. The general CBWS Terms of Service also apply to the use of all CBWS services and govern aspects not explicitly covered in this SLA.
