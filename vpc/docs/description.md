@@ -28,7 +28,7 @@ The service is supported on virtual servers, as well as bare metal servers and w
 
 The VPC service includes a 99.9% uptime Service Level Agreement (SLA) by default for connectivity within each Private Network per Availability Zone, and for the VPC routing functionality between Private Networks in different Availability Zones within the same region. SLAs are specific to service components and the Availability Zone(s) where they are delivered; currently, we do not offer a single, overarching SLA covering all aspects of a multi-AZ VPC deployment under one measurement.
 
-For detailed terms, conditions, claim processes, and compensation related to this SLA, please refer to the [Virtual Private Cloud (VPC) Service - Service Level Agreement](./vpc-sla.md).
+For detailed terms, conditions, claim processes, and compensation related to this SLA, please refer to the [Service Level Agreement](/vpc/sla).
 
 ## Implementation details
 

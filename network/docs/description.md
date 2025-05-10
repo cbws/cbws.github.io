@@ -27,7 +27,7 @@ The Public Network service is supported in the following Availability Zones, hos
 
 The Public Network service includes a 99.9% uptime Service Level Agreement (SLA) by default for network connectivity per Availability Zone. Currently, we do not offer a general SLA that covers services across multiple Availability Zones; SLAs are specific to the Availability Zone where the service is delivered.
 
-For detailed terms, conditions, claim processes, and compensation related to this SLA, please refer to the [Public Network Service - Service Level Agreement](./public-network-sla.md).
+For detailed terms, conditions, claim processes, and compensation related to this SLA, please refer to the [Service Level Agreement](/network/sla).
 
 ## Bandwidth Billing
 

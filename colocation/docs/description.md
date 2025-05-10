@@ -26,7 +26,7 @@ The Colocation service is supported in the following Availability Zones, hosted 
 
 The Colocation service for Power and Cooling is covered by a specific Service Level Agreement, which includes a 99.99% uptime target for these components.
 
-For full details on these uptime targets, claim processes, remedies, and specific conditions, please refer to the [Colocation Service - Service Level Agreement](./colocation-sla.md).
+For full details on these uptime targets, claim processes, remedies, and specific conditions, please refer to the [Service Level Agreement](/colocation/sla).
 
 ## Facility Access
 
