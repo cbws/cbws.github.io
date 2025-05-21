@@ -82,3 +82,9 @@ Before the appointment to colocate the hardware, please ensure:
 2. The IPv4 address is configured on the management interface.
 3. Make sure you can log into your equipment without **needing internet access**, just in case. 
     - It's a good idea to test this by unplugging the internet cable before you bring it to the data center. 
+
+## Power Right including Power Consumption
+
+Our data center partner uses a "Power Right including Power Consumption" model for electricity. This means you are not charged based on how many kilowatt-hours (kWh) of electricity you use. Instead, you pay for a certain amount of power capacity (for example, per watt or kilowatt).
+
+This power capacity includes your actual power use. So, if you are given a "Power Right" for 115 watts, you can use that 115 watts fully for the entire month without being charged extra for the kWh you consume. Your power usage is pooled per datacenter. If at any moment you use more power then committed, we will reach out to discuss changing your contract.
