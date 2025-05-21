@@ -65,3 +65,26 @@ To request Remote Hands services, please contact CBWS support. All work is perfo
 * Coordinating with datacenter partners to uphold the physical security of the data center facility environment where CBWS racks are located.
 * Serving as the primary point of contact for service-related inquiries, including the coordination of facility access and remote hands.
 * Managing the SLA for the Colocation service components (Power and Cooling) as delivered through our datacenter partners.
+
+## Hardware Requirements
+
+To ensure your equipment works well with our Colocation service and for some parts of the service (like the Power SLA) to apply, your hardware must meet these requirements:
+
+1. Your equipment must have two power supplies for backup (redundant PSUs) and be able to use both. If it doesn't, we cannot provide the Power SLA.
+2. Your equipment needs two network ports set up to work together using LACP. 
+3. Your equipment must have a way to manage it remote (like iDrac, iLo, IPMI, or a similar add-in card like Sipeed NanoKVM PCIE).
+4. You must provide good quality sliding rails for your equipment that work smoothly.
+5. Your equipment must have a motherboard that supports a standard monitor connection (VGA) and have at least two standard USB ports (Type-A).
+
+Before the appointment to colocate the hardware, please ensure:
+
+1. The IPv4 and IPv6 addresses is configured on the public interface, and this public interface is configured with LACP.
+2. The IPv4 address is configured on the management interface.
+3. Make sure you can log into your equipment without **needing internet access**, just in case. 
+    - It's a good idea to test this by unplugging the internet cable before you bring it to the data center. 
+
+## Power Right including Power Consumption
+
+Our data center partner uses a "Power Right including Power Consumption" model for electricity. This means you are not charged based on how many kilowatt-hours (kWh) of electricity you use. Instead, you pay for a certain amount of power capacity (for example, per watt or kilowatt).
+
+This power capacity includes your actual power use. So, if you are given a "Power Right" for 115 watts, you can use that 115 watts fully for the entire month without being charged extra for the kWh you consume. Your power usage is pooled per datacenter. If at any moment you use more power then committed, we will reach out to discuss changing your contract.
