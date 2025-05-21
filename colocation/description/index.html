@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -395,6 +395,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-right-including-power-consumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Right including Power Consumption
+    </span>
+  </a>
   
 </li>
       
@@ -1093,6 +1111,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hardware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-right-including-power-consumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Right including Power Consumption
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1171,6 +1207,27 @@
 <li>Serving as the primary point of contact for service-related inquiries, including the coordination of facility access and remote hands.</li>
 <li>Managing the SLA for the Colocation service components (Power and Cooling) as delivered through our datacenter partners.</li>
 </ul>
+<h2 id="hardware-requirements">Hardware Requirements</h2>
+<p>To ensure your equipment works well with our Colocation service and for some parts of the service (like the Power SLA) to apply, your hardware must meet these requirements:</p>
+<ol>
+<li>Your equipment must have two power supplies for backup (redundant PSUs) and be able to use both. If it doesn't, we cannot provide the Power SLA.</li>
+<li>Your equipment needs two network ports set up to work together using LACP. </li>
+<li>Your equipment must have a way to manage it remote (like iDrac, iLo, IPMI, or a similar add-in card like Sipeed NanoKVM PCIE).</li>
+<li>You must provide good quality sliding rails for your equipment that work smoothly.</li>
+<li>Your equipment must have a motherboard that supports a standard monitor connection (VGA) and have at least two standard USB ports (Type-A).</li>
+</ol>
+<p>Before the appointment to colocate the hardware, please ensure:</p>
+<ol>
+<li>The IPv4 and IPv6 addresses is configured on the public interface, and this public interface is configured with LACP.</li>
+<li>The IPv4 address is configured on the management interface.</li>
+<li>Make sure you can log into your equipment without <strong>needing internet access</strong>, just in case. <ul>
+<li>It's a good idea to test this by unplugging the internet cable before you bring it to the data center. </li>
+</ul>
+</li>
+</ol>
+<h2 id="power-right-including-power-consumption">Power Right including Power Consumption</h2>
+<p>Our data center partner uses a "Power Right including Power Consumption" model for electricity. This means you are not charged based on how many kilowatt-hours (kWh) of electricity you use. Instead, you pay for a certain amount of power capacity (for example, per watt or kilowatt).</p>
+<p>This power capacity includes your actual power use. So, if you are given a "Power Right" for 115 watts, you can use that 115 watts fully for the entire month without being charged extra for the kWh you consume. Your power usage is pooled per datacenter. If at any moment you use more power then committed, we will reach out to discuss changing your contract.</p>
 
 
 
