@@ -21,6 +21,7 @@ The Colocation service is supported in the following Availability Zones, hosted 
 * **Physical Security:** The data center facilities, operated by our datacenter partners, feature 24/7 security personnel, CCTV surveillance, and multi-layered access controls.
 * **Connectivity Options:** The Colocation service can be combined with CBWS networking services like [Public Network service](/network/description) and [Virtual Private Cloud (VPC) service](./vpc.md) to provide connectivity for your equipment (these are separate services with their own terms).
 * **Remote Hands Support:** CBWS offers Remote Hands services for on-site assistance with your equipment (see details below).
+* **Management Uplink:** CBWS offers a free, included, management uplink for your iDrac / iLo / IPMI secured with a VPN.
 
 ## Service Level Agreement (SLA)
 
@@ -48,6 +49,13 @@ CBWS offers Remote Hands services to assist with tasks on your colocated equipme
     * **Emergency Remote Hands (outside CBWS office hours)**
 
 To request Remote Hands services, please contact CBWS support. All work is performed under your specific direction and responsibility.
+
+### Management Uplink
+CBWS offers a **free** management uplink for your iDrac / iLo / IPMI interface. This connection provides a way to manage your server out-of-band, even if your server or main network connection is down or misconfigured. It's especially useful for initial setup, troubleshooting, or remote power cycling.
+
+This uplink connects to a separate, private management network, which is different from your main network connections. You can securely access this management network by connecting to our VPN. We will provide you with the necessary IP address to pre-configure your server's management interface as part of the hardware requirements.
+
+Please note that we **do not** guarantee uptime or network speed (throughput) for this management uplink. It is meant for basic management tasks, not for transferring large amounts of data. Also, your management uplink **does not** have access to the Public Network.
 
 ## Responsibilities
 
