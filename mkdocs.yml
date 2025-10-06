@@ -3,7 +3,11 @@ theme:
   name: material
   features:
     - tabs
-    #- instant
+    - content.code.copy
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - search.suggest
 nav:
   - Home: index.md
   - Services:
@@ -18,13 +22,6 @@ markdown_extensions:
   - codehilite
   - pymdownx.tabbed
   - pymdownx.superfences
-  
-features:
-  - content.code.copy
-  - navigation.sections
-  - navigation.path
-  - navigation.top
-  - search.suggest
 
 plugins:
   - monorepo
