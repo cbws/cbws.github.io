@@ -18,6 +18,8 @@ markdown_extensions:
   - codehilite
   - pymdownx.tabbed
   - pymdownx.superfences
+  
+features:
   - content.code.copy
   - navigation.sections
   - navigation.path
