@@ -18,6 +18,16 @@ markdown_extensions:
   - codehilite
   - pymdownx.tabbed
   - pymdownx.superfences
+  - content.code.
+  - navigation.sections
+  - navigation.path
+  - navigation.top
+  - search.suggest
 
 plugins:
   - monorepo
+  - search
+  - glightbox
+
+copyright: >
+  Copyright &copy; 2025 CBWS B.V.
