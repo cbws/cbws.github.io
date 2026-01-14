@@ -43,7 +43,7 @@ The uplink capacity differs depending on whether the service is for virtual or b
 
 ### Virtual machines
 
-The maximum uplink capacity for a virtual machine is as advertised with the selected virtual machine flavor. This capacity **is not** shared between public internet traffic and any [Virtual Private Cloud (VPC) service](/vpc/description) traffic.
+The maximum uplink capacity for a virtual machine is as advertised with the selected machine type. This capacity **is not** shared between public internet traffic and any [Virtual Private Cloud (VPC) service](/vpc/description) traffic.
 
 ### Bare metal machines
 
