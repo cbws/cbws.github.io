@@ -40,7 +40,7 @@ Upon provisioning, machines designated for a Virtual Private Cloud are configure
 
 ### Virtual machines
 
-For virtual machines, a dedicated virtual network interface is provisioned and assigned to the machine, granting access to the designated Private Network. The maximum bandwidth available to this interface corresponds to the advertised capacity of the selected flavor.
+For virtual machines, a dedicated virtual network interface is provisioned and assigned to the machine, granting access to the designated Private Network. The maximum bandwidth available to this interface corresponds to the advertised capacity of the selected machine type.
 
 ### Bare metal machines
 
