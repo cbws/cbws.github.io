@@ -1097,10 +1097,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#virtual-servers" class="md-nav__link">
+  <a href="#virtual-machines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Virtual servers
+        Virtual machines
       
     </span>
   </a>
@@ -1108,10 +1108,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#physical-servers" class="md-nav__link">
+  <a href="#bare-metal-machines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physical servers
+        Bare metal machines
       
     </span>
   </a>
@@ -1330,10 +1330,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#virtual-servers" class="md-nav__link">
+  <a href="#virtual-machines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Virtual servers
+        Virtual machines
       
     </span>
   </a>
@@ -1341,10 +1341,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#physical-servers" class="md-nav__link">
+  <a href="#bare-metal-machines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physical servers
+        Bare metal machines
       
     </span>
   </a>
@@ -1520,10 +1520,10 @@
 
 
 <h1 id="public-network-service-description">Public Network / Service Description</h1>
-<p>The Public Network service provides your servers with robust and reliable public internet connectivity. CBWS manages the underlying network infrastructure, including transit provider relationships, Internet Exchange (IX) peering, and core routing, to ensure optimal performance and availability.</p>
+<p>The Public Network service provides your machines with robust and reliable public internet connectivity. CBWS manages the underlying network infrastructure, including transit provider relationships, Internet Exchange (IX) peering, and core routing, to ensure optimal performance and availability.</p>
 <p>This service can be used independently or in conjunction with our <a href="/vpc/description">Virtual Private Cloud (VPC) service</a> to provide comprehensive connectivity solutions for your hosted infrastructure.</p>
 <h2 id="service-overview">Service Overview</h2>
-<p>This service equips your servers with access to the public internet, enabling them to send and receive traffic globally. We focus on providing high-quality bandwidth with diverse routing paths.</p>
+<p>This service equips your machines with access to the public internet, enabling them to send and receive traffic globally. We focus on providing high-quality bandwidth with diverse routing paths.</p>
 <p>The Public Network service is supported in the following Availability Zones, hosted within facilities managed by our datacenter partners:</p>
 <ul>
 <li><strong>Region nl-ein</strong><ul>
@@ -1550,18 +1550,18 @@
 <li><strong>TB Bandwidth Usage (Traffic Packs):</strong> Pay based on the total amount of data transferred (in Terabytes) over the public network. Bandwidth packs are purchased beforehand, and overusage is calculated if the allowance is exceeded. This model is suitable for applications with predictable data transfer volumes.</li>
 </ul>
 <h2 id="uplinks">Uplinks</h2>
-<p>The uplink capacity differs depending on whether the service is for virtual or physical servers.</p>
-<h3 id="virtual-servers">Virtual servers</h3>
-<p>The maximum uplink capacity for a virtual server is as advertised with the selected virtual server flavor. This capacity <strong>is not</strong> shared between public internet traffic and any <a href="/vpc/description">Virtual Private Cloud (VPC) service</a> traffic.</p>
-<h3 id="physical-servers">Physical servers</h3>
+<p>The uplink capacity differs depending on whether the service is for virtual or bare metal machines.</p>
+<h3 id="virtual-machines">Virtual machines</h3>
+<p>The maximum uplink capacity for a virtual machine is as advertised with the selected virtual machine flavor. This capacity <strong>is not</strong> shared between public internet traffic and any <a href="/vpc/description">Virtual Private Cloud (VPC) service</a> traffic.</p>
+<h3 id="bare-metal-machines">Bare metal machines</h3>
 <p><em>Relevant for bare metal &amp; colocation.</em></p>
-<p>The following dedicated physical uplink capacities are available for connecting your physical servers to our network infrastructure:</p>
+<p>The following dedicated physical uplink capacities are available for connecting your physical machines to our network infrastructure:</p>
 <ul>
 <li><strong>1 Gbit/s:</strong> Available at nl-ein-1</li>
 <li><strong>10 Gbit/s:</strong> Available at nl-ein-1</li>
 <li><strong>25 Gbit/s:</strong> Available at nl-ein-2</li>
 </ul>
-<p>The choice of uplink type will typically depend on the server or colocation package selected. For physical servers, Link Aggregation Control Protocol (LACP) is always deployed, bundling them into a single logical channel for increased throughput and redundancy. This total aggregated capacity <strong>is</strong> shared between public internet traffic and any <a href="/vpc/description">Virtual Private Cloud (VPC) service</a> traffic.</p>
+<p>The choice of uplink type will typically depend on the machine or colocation package selected. For bare metal machines, Link Aggregation Control Protocol (LACP) is always deployed, bundling them into a single logical channel for increased throughput and redundancy. This total aggregated capacity <strong>is</strong> shared between public internet traffic and any <a href="/vpc/description">Virtual Private Cloud (VPC) service</a> traffic.</p>
 <h2 id="additional-services">Additional Services</h2>
 <h3 id="ipv6-subnet">IPv6 Subnet</h3>
 <p>An IPv6 subnet (/64 or as agreed) is provided by default with all Public Network uplinks, enabling IPv6 connectivity for your services.</p>
@@ -1572,7 +1572,7 @@
 <h3 id="ip-announcement-byoip">IP Announcement (BYOIP)</h3>
 <p>If you have your own Autonomous System Number (ASN) and IP address ranges (IPv4 or IPv6), CBWS can announce these from our network edge. This makes your own IP addresses usable over your Public Network connection with us.</p>
 <h2 id="combining-with-virtual-private-cloud-vpc">Combining with Virtual Private Cloud (VPC)</h2>
-<p>While this service provides public internet access, our <a href="/vpc/description">Virtual Private Cloud (VPC) service</a> can be used simultaneously to create an isolated, high-speed network for communication <em>between</em> your servers. This allows public-facing services to run alongside secure, high-performance backend communication, with internal VPC traffic not incurring public bandwidth charges.</p>
+<p>While this service provides public internet access, our <a href="/vpc/description">Virtual Private Cloud (VPC) service</a> can be used simultaneously to create an isolated, high-speed network for communication <em>between</em> your machines. This allows public-facing services to run alongside secure, high-performance backend communication, with internal VPC traffic not incurring public bandwidth charges.</p>
 
 
 
