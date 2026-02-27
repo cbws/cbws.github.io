@@ -14,6 +14,7 @@ nav:
     - Colocation: '!include ./colocation/mkdocs.yml'
     - Identity & Access Management: '!include ./iam/mkdocs.yml'
     - Projects: '!include ./projects/mkdocs.yml'
+    - DNS: '!include ./dns/mkdocs.yml'
     - Virtual Private Clouds: '!include ./vpc/mkdocs.yml'
     - Public Network: '!include ./network/mkdocs.yml'
 
