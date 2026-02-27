@@ -12,7 +12,7 @@ This document outlines the Service Level Agreement (SLA) specific to the CBWS ma
 
 ## Recovery Objectives
 
-* **Recovery Point Objective (RPO):** Due to the heavily redundant, distributed nature of our DNS cluster setup, our RPO is zero data loss. Your DNS zone data and records are safely replicated across the cluster.
+* **Recovery Point Objective (RPO):** Due to the heavily redundant, distributed nature of our DNS cluster setup, our RPO is designed to ensure almost no data loss under normal operating conditions. In a worst-case disaster scenario, the maximum potential data loss is up to 24 hours, and this is exclusively restricted to DNS records.
 * **Recovery Time Objective (RTO):** Our RTO is strictly based on maintaining our 99.9% uptime commitment, meaning total permitted downtime for recovery operations will not exceed approximately 43.8 minutes in a standard 30-day billing month.
 
 ## Downtime Measurement

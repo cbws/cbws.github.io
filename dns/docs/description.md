@@ -18,7 +18,7 @@ The DNS service is integrated seamlessly with the broader CBWS ecosystem, making
 
 * **Distributed & Redundant Cluster:** Your DNS zones are replicated across a distributed cluster, ensuring that if one node fails, others seamlessly pick up the query load without interruption.
 * **High Availability & Reliability:** Designed from the ground up to prevent single points of failure, ensuring your applications remain discoverable. 
-* **Zero Data Loss (RPO):** Thanks to our synchronously replicated and highly redundant setup, our Recovery Point Objective (RPO) guarantees no loss of your DNS records and configurations.
+* **Minimal Data Loss (RPO)**: Thanks to our replicated and highly redundant setup, we strive for almost no data loss. In the unlikely worst-case scenario, our Recovery Point Objective (RPO) is a maximum of 24 hours, and any potential loss is strictly limited to DNS records and zone configurations.
 * **Rapid Recovery (RTO):** Our Recovery Time Objective (RTO) is strictly aligned with our 99.9% uptime guarantee, ensuring any service restoration happens within the allowed downtime window.
 
 ## Service Level Agreement (SLA)
