@@ -1,0 +1,14 @@
+site_name: dns
+theme:
+  name: material
+
+nav:
+  - Service Description: "description.md"
+  - Service Level Agreement: "sla.md"
+  #- Guides:
+  #    - Getting started: "getting-started.md"
+#  - Reference:
+#      - Permissions/roles: "reference/permissions.md"
+#      - Golang: "golang.md"
+#      - PHP: "php.md"
+#      - Protobuf: "reference/protobuf.md"
